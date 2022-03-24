@@ -1,0 +1,33 @@
+{
+    "type": "project",
+    "name": "benelori/codecept_storm",
+    "description": "Reproduction repository for running codeception version 5",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.0.3"
+    },
+    "require-dev": {
+        "codeception/codeception": "5.0.x-dev#46ed8f22bf3d7933a4b6907b59364c0c25431e5d",
+        "codeception/module-phpbrowser": "^3.0",
+        "codeception/module-asserts": "^3.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/_support",
+            "App\\Tests\\Unit\\": "tests/unit"
+        }
+    }
+}
